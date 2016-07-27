@@ -66,6 +66,10 @@ ul, li {
     margin-top: 3px;
 }
 
+.contacts {
+	height: 550px;
+}
+
 .masthead {
     display: flex;
     justify-content: center;
@@ -138,18 +142,20 @@ ul, li {
 ***********************************************************/
 .navbtn {
   position: fixed;
-  top: 0px !important;
-  left: 0px !important;
+  top: 0;
+  right: 0;
   width: 110px;
   height: 98px;  
   cursor: pointer;
   z-index: 999999;
-  background: $navbtncolor;
-  opacity: 0.9;
+//   background: $navbtncolor;
+	background: $themecolor;
+//   opacity: 0.4;
 //   @include transform-origin(110px 0px);
   @include transform(scale(0.6));
   @include transition(background 0.3s linear);
-  @include transform-origin(0px 0px);
+  @include transform-origin(110px 0px);
+
 }
 
 .navbtn.open { }
@@ -159,22 +165,27 @@ ul, li {
 .navln {
   display: block;
   position: absolute;
-  width: 80px;
-  height: 8px;
+//   width: 80px;
+  width: 58px;
+  height: 2px;
   background: $navlncolor;
-  left: 15px;
-  @include transform-origin(0px 4px);
+//   left: 15px;
+  left: 27px;
+//   @include transform-origin(0px 4px);
+  @include transform-origin(7.5px 3px);
   @include transition (opacity 0.3s $ease-in-out-cubic 0s, transform 0.24s $ease-in-out-cubic 0s);
 }
 
 @for $i from 1 through 3 {
   .navln:nth-child(#{$i}) {
-    top: 16px + (($i)-1)*28;
+//     top: 16px + (($i)-1)*28;
+    top: 32px + (($i)-1)*15;
   }
 }
 
 .close .navln:nth-child(1) {
-  @include transform(translateX(11px) rotate(45deg));
+//   @include transform(translateX(11px) rotate(45deg));
+  @include transform(translateX(8px) rotate(45deg));
 }
 
 .close .navln:nth-child(2) {
@@ -182,14 +193,17 @@ ul, li {
 }
 
 .close .navln:nth-child(3) {
-  @include transform(translateX(11px) rotate(-45deg));
+//   @include transform(translateX(11px) rotate(-45deg));
+  @include transform(translateX(8px) rotate(-45deg));
 }
 
 nav {
 	position: fixed;
-	top: 59px;
+	top: 58px;
+	right: 0;
 	z-index: 999999;
 	opacity: 0.9;
+	
 }
 
 nav a {
@@ -206,11 +220,14 @@ nav li {
 	color: $navitmcolor;
 	background-color: $navitmbgcolor;
  	padding: 12px;
- 	width: 200px;
- 	
+ 	width: 200px; 	
 }
 
 nav li:hover {
+	background-color: $themecolor;
+}
+
+nav li.active {
 	background-color: $themecolor;
 }
 
@@ -227,11 +244,13 @@ nav li:hover {
 }
 
 nav.out li {
-  @include transform(translateX(-100%));
+  @include transform(translateX(300%));
   opacity: 0;
 }
 
 nav.in li {
+	right:0;
+
   @include transform(translateX(0));
   opacity: 0.9;
 }

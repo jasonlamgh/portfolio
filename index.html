@@ -2,9 +2,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Welcome + Portfolio | Jason Lam</title>
-	<link rel="stylesheet" href="css/styles.css" type="text/css"  media="all">
 	<link rel="stylesheet" href="sass/styles.css" type="text/css"  media="all">
+	<script type="text/javascript" src="scripts/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="scripts/noframework.waypoints.min.js"></script>
 	<script type="text/javascript" src="scripts/core.js"></script>
+
 </head>
 <body>
 	<!-- BEGIN nav -->
@@ -15,17 +17,20 @@
 	</div>		
 	<nav id="nav" class="out">
 		<ul>
-			<li><span class="navlbl"><a href="#" >HOME</a></span></span></li>
-			<li><span class="navlbl">ABOUT</span></li>
-			<li><span class="navlbl">WORK</span></li>
-			<li><span class="navlbl">CONTACT</span></li>
+			<li id="navbtn__home" class="navclass"><span class="navlbl">HOME</span></li>
+			<li id="navbtn__about" class="navclass"><span class="navlbl">ABOUT</span></li>
+			<li id="navbtn__work" class="navclass"><span class="navlbl">WORK</span></li>
+			<li id="navbtn__contacts" class="navclass"><span class="navlbl">CONTACTS</span></li>
 		</ul>
 	</nav><!-- END nav -->
+	
 	<!-- BEGIN sections -->	
 	<div class="sections" role="main">		
 		<!-- BEGIN section home -->		
 		<section id="section__home" class="ui masthead" role="article">
+			
 			<div class="tag">
+				<div id="waypoint__home"></div>
 				<p>WELCOME, MY NAME IS <span>JASON.</span></p>
 				<div class="taganim">					
 					<p>I'M A</p>
@@ -37,14 +42,17 @@
 					</p>
 				</div>
 				</div>
+				<div id="waypoint__about"></div>
 			</div><!-- END tag1 -->
 		</section><!-- END section__home -->
-			
-		<section id="section__about" class="ui about vertical ">
+
+		<!-- BEGIN section about -->		
+		<section id="section__about" class="ui about vertical ">			
 			<h1><span>ABOUT</span></h1>
 			<p>My name is Jason Lam and I’m a <strong>software engineer/web developer &amp; interactive designer</strong> from <strong> Melbourne, Australia</strong>.</p>
 					<p>I'm an experienced software engineer/web developer and interactive designer and have worked with many types of clients on various types of projects. I am self motivated with a keen sense of design and thrive in a fast pace work environment. 
 			</p>	
+			<div id="waypoint__work"></div>
 			<ul>
 				<li>SKILLS / EXPERTISE</li>
 				<li>Programming Languages || </li>
@@ -89,17 +97,23 @@
 				<li>Google Analytics Google Tag</li>
 				<li>Adobe Omniture</li>
 			</ul>
-		</section>
-		<div class="ui vertical stripe work segmant">
-			<h1><span>CLIENTS</span></h1>	
-		</div>		
-		<div class="ui vertical stripe contacts segmant">
+		</section><!-- END section__about -->
+		
+		<!-- BEGIN section work -->		
+		<section id="section__work" class="ui vertical work">
+			<div id="waypoint"></div>
+			<h1><span>WORK</span></h1>
+			<div id="waypoint__contacts"></div>	
+		</section><!-- END section__work -->	
+		
+		<!-- BEGIN section contacts -->		
+		<section id="section__contacts" class="ui vertical contacts">
 			<h1><span>CONTACTS</span></h1>		
 			<ul>
 				<li>E: jason.lam@live.com</li>
 				<li>T: +61 422 759 905</li>
 			</ul>	
-		</div>	
+		</section><!-- END section__contacts -->	
 	</div><!-- END sections -->
 </body>
 </html>

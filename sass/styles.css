@@ -49,6 +49,9 @@ ul, li {
   padding: 8px;
   margin-top: 3px; }
 
+.contacts {
+  height: 550px; }
+
 .masthead {
   display: flex;
   justify-content: center;
@@ -109,14 +112,13 @@ ul, li {
 ***********************************************************/
 .navbtn {
   position: fixed;
-  top: 0px !important;
-  left: 0px !important;
+  top: 0;
+  right: 0;
   width: 110px;
   height: 98px;
   cursor: pointer;
   z-index: 999999;
-  background: #222;
-  opacity: 0.9;
+  background: #009c95;
   -webkit-transform: scale(0.6);
   -moz-transform: scale(0.6);
   -ms-transform: scale(0.6);
@@ -125,57 +127,58 @@ ul, li {
   -webkit-transition: background 0.3s linear;
   -moz-transition: background 0.3s linear;
   transition: background 0.3s linear;
-  -webkit-transform-origin: 0px 0px;
-  -moz-transform-origin: 0px 0px;
-  -ms-transform-origin: 0px 0px;
-  -o-transform-origin: 0px 0px;
-  transform-origin: 0px 0px; }
+  -webkit-transform-origin: 110px 0px;
+  -moz-transform-origin: 110px 0px;
+  -ms-transform-origin: 110px 0px;
+  -o-transform-origin: 110px 0px;
+  transform-origin: 110px 0px; }
 
 .navln {
   display: block;
   position: absolute;
-  width: 80px;
-  height: 8px;
+  width: 58px;
+  height: 2px;
   background: #fff;
-  left: 15px;
-  -webkit-transform-origin: 0px 4px;
-  -moz-transform-origin: 0px 4px;
-  -ms-transform-origin: 0px 4px;
-  -o-transform-origin: 0px 4px;
-  transform-origin: 0px 4px;
+  left: 27px;
+  -webkit-transform-origin: 7.5px 3px;
+  -moz-transform-origin: 7.5px 3px;
+  -ms-transform-origin: 7.5px 3px;
+  -o-transform-origin: 7.5px 3px;
+  transform-origin: 7.5px 3px;
   -webkit-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -webkit-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   -moz-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -moz-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
 
 .navln:nth-child(1) {
-  top: 16px; }
+  top: 32px; }
 
 .navln:nth-child(2) {
-  top: 44px; }
+  top: 47px; }
 
 .navln:nth-child(3) {
-  top: 72px; }
+  top: 62px; }
 
 .close .navln:nth-child(1) {
-  -webkit-transform: translateX(11px) rotate(45deg);
-  -moz-transform: translateX(11px) rotate(45deg);
-  -ms-transform: translateX(11px) rotate(45deg);
-  -o-transform: translateX(11px) rotate(45deg);
-  transform: translateX(11px) rotate(45deg); }
+  -webkit-transform: translateX(8px) rotate(45deg);
+  -moz-transform: translateX(8px) rotate(45deg);
+  -ms-transform: translateX(8px) rotate(45deg);
+  -o-transform: translateX(8px) rotate(45deg);
+  transform: translateX(8px) rotate(45deg); }
 
 .close .navln:nth-child(2) {
   opacity: 0; }
 
 .close .navln:nth-child(3) {
-  -webkit-transform: translateX(11px) rotate(-45deg);
-  -moz-transform: translateX(11px) rotate(-45deg);
-  -ms-transform: translateX(11px) rotate(-45deg);
-  -o-transform: translateX(11px) rotate(-45deg);
-  transform: translateX(11px) rotate(-45deg); }
+  -webkit-transform: translateX(8px) rotate(-45deg);
+  -moz-transform: translateX(8px) rotate(-45deg);
+  -ms-transform: translateX(8px) rotate(-45deg);
+  -o-transform: translateX(8px) rotate(-45deg);
+  transform: translateX(8px) rotate(-45deg); }
 
 nav {
   position: fixed;
-  top: 59px;
+  top: 58px;
+  right: 0;
   z-index: 999999;
   opacity: 0.9; }
 
@@ -194,6 +197,9 @@ nav li {
   width: 200px; }
 
 nav li:hover {
+  background-color: #009c95; }
+
+nav li.active {
   background-color: #009c95; }
 
 nav.in li:nth-child(1) {
@@ -247,14 +253,15 @@ nav.out li:nth-child(1) {
   transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s, opacity 0.3s linear 0.2s; }
 
 nav.out li {
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
-  transform: translateX(-100%);
+  -webkit-transform: translateX(300%);
+  -moz-transform: translateX(300%);
+  -ms-transform: translateX(300%);
+  -o-transform: translateX(300%);
+  transform: translateX(300%);
   opacity: 0; }
 
 nav.in li {
+  right: 0;
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
