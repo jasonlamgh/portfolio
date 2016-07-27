@@ -5,6 +5,7 @@
 	Fonts
 ***********************************************************/
 @import url(http://fonts.googleapis.com/css?family=Patua+One);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400,700,300,900);
 /**********************************************************
 	Theme Colors
 ***********************************************************/
@@ -13,7 +14,8 @@
 ***********************************************************/
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 a {
   text-decoration: none; }
@@ -41,9 +43,13 @@ ul, li {
   color: #009c95;
   font-weight: 400; }
 
+.about a {
+  font-weight: 300;
+  color: #009c95; }
+
 .about li, .contacts li {
   display: inline-block;
-  font-size: 12px;
+  font-size: 14px;
   color: #ffffff;
   background-color: #009c95;
   padding: 8px;
@@ -51,6 +57,14 @@ ul, li {
 
 .contacts {
   height: 550px; }
+
+.contacts a {
+  color: #fff; }
+
+.contacts li {
+  font-size: 18px;
+  font-weight: 300;
+  padding-top: 40px; }
 
 .masthead {
   display: flex;
@@ -76,12 +90,116 @@ ul, li {
   vertical-align: top;
   margin: 0; }
 
-.vertical {
-  margin: 180px 0; }
-
 .ui {
-  padding: 20px; }
+  padding: 20px 20px 220px 20px; }
 
+#section__work, #section__contacts {
+  background: #009c95; }
+
+#section__work {
+  display: table;
+  width: 100%; }
+
+.og-grid {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%; }
+
+.og-grid li {
+  display: inline-block;
+  margin: 10px 5px 0 5px;
+  vertical-align: top;
+  height: 250px; }
+
+.og-grid li > a,
+.og-grid li > a img {
+  border: none;
+  outline: none;
+  display: block;
+  position: relative; }
+
+.og-grid li.og-expanded > a::after {
+  top: auto;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: #ddd;
+  border-width: 15px;
+  left: 50%;
+  margin: -20px 0 0 -15px; }
+
+.og-grid-tn {
+  opacity: 0.5; }
+
+/*
+#box {
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 0;
+    cursor: pointer;
+    margin: 15px 0;
+    padding: 0 15px;
+    position: relative;
+        float: left;
+    width: 50%;
+}
+
+
+.disney, .lego, .everlast, .anz, .chuggington, .payswyft, .novatti, .isuzu, .disneyjr, .malvernstar {
+	min-height: 300px;
+    height: 300px;
+	    background-size: auto 120%;
+	        background-repeat: no-repeat;
+	            transform: matrix(1, 0, 0, 1, 0, 0);
+// 	min-height: 1px;
+}
+
+.disney {
+	background-image: url(../images/work_logo-02.svg);
+}
+
+.lego {
+	background-image: url(../images/work_logo-03.svg);
+}
+
+.everlast {
+	background-image: url(../images/work_logo-04.svg);
+}
+
+.anz {
+	background-image: url(../images/work_logo-05.svg);
+}
+
+.disneyjr {
+	background-image: url(../images/work_logo-08.svg);
+}
+
+.payswyft {
+	background-image: url(../images/work_logo-06.svg);
+}
+
+.novatti {
+	background-image: url(../images/work_logo-10.svg);
+}
+
+.isuzu {
+	background-image: url(../images/work_logo-09.svg);
+}
+
+.malvernstar {
+	background-image: url(../images/work_logo-07.svg);
+}
+
+.chuggington {
+	background-image: url(../images/work_logo-11.svg);
+}
+*/
 /**********************************************************
 	TAG Animation  CSS
 ***********************************************************/

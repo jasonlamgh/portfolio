@@ -69,7 +69,7 @@ $(document).ready(function(){
 	for (var i = 0; i < navItems.length; i++) {
 		$("#" + navItems[i].id).click(function(){
 			var sectionId = this.id.replace("navbtn", "");
-			$("html, body").animate({scrollTop:$("section#section"+sectionId).offset().top-80}, 500);
+			$("html, body").animate({scrollTop:$("section#section"+sectionId).offset().top}, 500);
 			toggleNav(null);
 			setActiveNavItem(this.id);
 		});
