@@ -1,0 +1,237 @@
+/**********************************************************
+	SASS Imports
+***********************************************************/
+@import "bourbon/bourbon";
+
+/**********************************************************
+	Fonts
+***********************************************************/
+@import url(http://fonts.googleapis.com/css?family=Patua+One);
+
+/**********************************************************
+	Theme Colors
+***********************************************************/
+$themecolor: #009c95;
+$navbtncolor: #222;
+$navlncolor: #fff;
+$navitmcolor: #fff;
+$navitmbgcolor: #222;
+$alinkcolor: #fff;
+/**********************************************************
+	Global SASS CSS
+***********************************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+    font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-smoothing: antialiased;
+}
+
+h1 span {
+    font-weight: 300;
+    color: #ffffff;
+    background-color: $themecolor;
+    line-height: 1.2857em;
+    padding: 8px;
+}
+
+p {
+    margin: 30px 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.about strong {
+    color: $themecolor;
+    font-weight: 400;
+}
+
+.about li, .contacts li {
+    display: inline-block;
+    font-size: 12px;
+    color: #ffffff;
+    background-color: $themecolor;
+    padding: 8px;
+    margin-top: 3px;
+}
+
+.masthead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $themecolor;
+    height: 100vh;
+}
+
+.tag {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.tag p {
+    margin: 0;
+}
+
+.tag span {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.taganim p {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+
+.vertical {
+    margin: 180px 0;
+}
+
+.ui {
+    padding: 20px;
+}
+
+/**********************************************************
+	TAG Animation  CSS
+***********************************************************/
+.word {
+    position: absolute;
+    opacity: 0;
+}
+
+.w {
+  display: inline-block;
+  position: relative;
+  float: left;
+/*   transform: translateZ(25px); */
+/*   transform-origin: 50% 50% 25px; */
+}
+
+.w.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.w.behind {
+  transform: rotateX(-90deg);
+}
+
+.w.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/**********************************************************
+	Navigation Animation SASS CSS
+***********************************************************/
+.navbtn {
+  position: fixed;
+  top: 0px !important;
+  left: 0px !important;
+  width: 110px;
+  height: 98px;  
+  cursor: pointer;
+  z-index: 999999;
+  background: $navbtncolor;
+  opacity: 0.9;
+//   @include transform-origin(110px 0px);
+  @include transform(scale(0.6));
+  @include transition(background 0.3s linear);
+  @include transform-origin(0px 0px);
+}
+
+.navbtn.open { }
+
+.navbtn.close { }
+
+.navln {
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 8px;
+  background: $navlncolor;
+  left: 15px;
+  @include transform-origin(0px 4px);
+  @include transition (opacity 0.3s $ease-in-out-cubic 0s, transform 0.24s $ease-in-out-cubic 0s);
+}
+
+@for $i from 1 through 3 {
+  .navln:nth-child(#{$i}) {
+    top: 16px + (($i)-1)*28;
+  }
+}
+
+.close .navln:nth-child(1) {
+  @include transform(translateX(11px) rotate(45deg));
+}
+
+.close .navln:nth-child(2) {
+  opacity: 0;
+}
+
+.close .navln:nth-child(3) {
+  @include transform(translateX(11px) rotate(-45deg));
+}
+
+nav {
+	position: fixed;
+	top: 59px;
+	z-index: 999999;
+	opacity: 0.9;
+}
+
+nav a {
+	color: $alinkcolor;
+}
+
+nav ul, li {
+	cursor: pointer;
+}
+
+nav li {
+	font-size: 28px;
+	font-weight: 300;
+	color: $navitmcolor;
+	background-color: $navitmbgcolor;
+ 	padding: 12px;
+ 	width: 200px;
+ 	
+}
+
+nav li:hover {
+	background-color: $themecolor;
+}
+
+@for $i from 1 through 5 {
+  nav.in li:nth-child(#{$i}) {
+    @include transition(transform 0.5s $ease-out-cubic (0.1s*$i), opacity 0.5s linear (0.1s*$i));
+  }
+}
+
+@for $i from 5 through 1 {
+  nav.out li:nth-child(#{$i}) {
+    @include transition(transform 0.3s $ease-in-cubic (0.05s*(5-$i)), opacity 0.3s linear (0.05s*(5-$i)));
+  }
+}
+
+nav.out li {
+  @include transform(translateX(-100%));
+  opacity: 0;
+}
+
+nav.in li {
+  @include transform(translateX(0));
+  opacity: 0.9;
+}
