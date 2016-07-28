@@ -3,31 +3,32 @@
 	<meta charset="utf-8">
 	<title>Welcome + Portfolio | Jason Lam</title>
 	<link rel="stylesheet" href="sass/styles.css" type="text/css"  media="all">
-	<script type="text/javascript" src="scripts/jquery-1.6.1.min.js"></script>
-	<script type="text/javascript" src="scripts/noframework.waypoints.min.js"></script>
-	<script type="text/javascript" src="scripts/core.js"></script>
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/noframework.waypoints.min.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.js"></script>	
+	<script type="text/javascript" src="js/core.js"></script>
 </head>
 <body>
-	<!-- BEGIN nav -->
-	<div id="navbtn" class="navbtn open">
-		<span class="navln"></span>
-		<span class="navln"></span>
-		<span class="navln"></span>
+	<!-- BEGIN menu -->
+	<div id="menu-btn" class="menu-btn open">
+		<span class="menu-ln"></span>
+		<span class="menu-ln"></span>
+		<span class="menu-ln"></span>
 	</div>		
-	<nav id="nav" class="out">
+	<nav id="menu" class="out">
 		<ul>
-			<li id="navbtn__home" class="navclass"><span class="navlbl">HOME</span></li>
-			<li id="navbtn__about" class="navclass"><span class="navlbl">ABOUT</span></li>
-			<li id="navbtn__work" class="navclass"><span class="navlbl">WORK</span></li>
-			<li id="navbtn__contacts" class="navclass"><span class="navlbl">CONTACTS</span></li>
+			<li id="menu-btn__home" class="menu"><span class="navlbl">HOME</span></li>
+			<li id="menu-btn__about" class="menu"><span class="navlbl">ABOUT</span></li>
+			<li id="menu-btn__work" class="menu"><span class="navlbl">WORK</span></li>
+			<li id="menu-btn__contacts" class="menu"><span class="navlbl">CONTACTS</span></li>
 		</ul>
-	</nav><!-- END nav -->
-	
+	</nav><!-- END menu -->
+	<div class="clearfix" />
+
 	<!-- BEGIN sections -->	
 	<div class="sections" role="main">		
 		<!-- BEGIN section home -->		
-		<section id="section__home" class="ui masthead" role="article">
-			
+		<section id="section__home" class="ui master-head" role="article">
 			<div class="tag">
 				<div id="waypoint__home"></div>
 					<p>WELCOME, MY NAME IS <span>JASON.</span></p>
@@ -44,7 +45,8 @@
 				<div id="waypoint__about"></div>
 			</div><!-- END tag1 -->
 		</section><!-- END section__home -->
-
+		<div class="clearfix" />
+		
 		<!-- BEGIN section about -->		
 		<section id="section__about" class="ui about">			
 			<h1><span>ABOUT</span></h1>
@@ -101,79 +103,69 @@
 				<li>Adobe Omniture</li>
 			</ul>
 		</section><!-- END section__about -->
+		<div class="clearfix" />
 		
 		<!-- BEGIN section work -->		
 		<section id="section__work" class="ui work">
 			<div id="waypoint"></div>
 			<h1><span>WORK</span></h1>
-			<ul id="og-grid" class="og-grid">
-				<li>
-					<a>
-						<img src="images/work_logo-02.svg" class="og-grid-tn" />
-					</a>
-				</li>
-				<li>
-					<a>
-						<img src="images/work_logo-08.svg" class="og-grid-tn"/>
-					</a>
-				</li>
-				<li>
-					<a>
-						<img src="images/work_logo-03.svg" class="og-grid-tn"/>
-					</a>
-				</li>
-				<li>
-					<a>
-						<img src="images/work_logo-05.svg" class="og-grid-tn"/>
-					</a>
-				</li>
-				
-			</ul>
-<!--		
-			<div id="box">
-				<div id="img" class="disney"></div>
-				<div id="desc"></div>
+			<div class="main">
+				<ul id="og-grid" class="og-grid">
+					<li>
+						<a href="#" data-title="Disney Junior" data-description="xyz">
+							<img src="images/work_logo-02.svg" />
+						</a>
+					</li>
+					<li>
+						<a href="#" data-title="Disney Playhouse" data-description="">
+							<img src="images/work_logo-03.svg" />
+						</a>
+					</li>
+					<li>
+						<a href="#" data-title="Disney Playhouse" data-description="">
+							<img src="images/work_logo-04.svg" />
+						</a>
+					</li>
+					<li>
+						<a href="#" data-title="Disney Playhouse" data-description="">
+							<img src="images/work_logo-05.svg" />
+						</a>
+					</li>
+					<li>
+						<a href="#" data-title="Disney Playhouse" data-description="">
+							<img src="images/work_logo-06.svg" />
+						</a>
+					</li>
+					<li>
+						<a href="#" data-title="Disney Playhouse" data-description="">
+							<img src="images/work_logo-07.svg" />
+						</a>
+					</li>
+					<li>
+						<a href="#" data-title="Disney Playhouse" data-description="">
+							<img src="images/work_logo-08.svg" />
+						</a>
+					</li>
+					<li>
+						<a href="#" data-title="Disney Playhouse" data-description="">
+							<img src="images/work_logo-09.svg" />
+						</a>
+					</li>
+					<li>
+						<a href="#" data-title="Disney Playhouse" data-description="">
+							<img src="images/work_logo-10.svg" />
+						</a>
+					</li>
+					<li>
+						<a href="#" data-title="Disney Playhouse" data-description="">
+							<img src="images/work_logo-11.svg" />
+						</a>
+					</li>
+				</ul>
 			</div>
-			<div id="box">
-				<div id="img" class="lego"></div>
-				<div id="desc"></div>
-			</div>
-			<div id="box">
-				<div id="img" class="everlast"></div>
-				<div id="desc"></div>
-			</div>
-			<div id="box">
-				<div id="img" class="anz"></div>
-				<div id="desc"></div>
-			</div>
-			<div id="box">
-				<div id="img" class="disneyjr"></div>
-				<div id="desc"></div>
-			</div>
-			<div id="box">
-				<div id="img" class="novatti"></div>
-				<div id="desc"></div>
-			</div>
-			<div id="box">
-				<div id="img" class="payswyft"></div>
-				<div id="desc"></div>
-			</div>
-			<div id="box">
-				<div id="img" class="isuzu"></div>
-				<div id="desc"></div>
-			</div>
-			<div id="box">
-				<div id="img" class="chuggington"></div>
-				<div id="desc"></div>
-			</div>
-			<div id="box">
-				<div id="img" class="malvernstar"></div>
-				<div id="desc"></div>
-			</div>
-			
-			<div style="clear: both;" />
--->		<div id="waypoint__contacts"></div>	
-		</section><!-- END section__work -->	
+		<div id="waypoint__contacts"></div>	
+		</section><!-- END section__work -->
+		<div class="clearfix" />	
 		
 		<!-- BEGIN section contacts -->		
 		<section id="section__contacts" class="ui contacts">
@@ -182,7 +174,16 @@
 				<li><a href="mailto:jason.lam@live.com">E : jason.lam@live.com</a></li>
 				<li>T : +61-422-759-905</li>
 			</ul>	
-		</section><!-- END section__contacts -->	
+		</section><!-- END section__contacts -->
+		<div class="clearfix" />
 	</div><!-- END sections -->
+
+	<!-- INFO: implemented to exec grid.js -->
+	<script src="js/custom-grid.js" ></script>
+	<script>
+		$(function() {
+			Grid.init();
+		});
+	</script>
 </body>
 </html>
