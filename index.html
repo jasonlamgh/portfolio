@@ -3,26 +3,25 @@
 	<meta charset="utf-8">
 	<title>Welcome + Portfolio | Jason Lam</title>
 	<link rel="stylesheet" href="sass/styles.css" type="text/css"  media="all">
-	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 	<script type="text/javascript" src="js/noframework.waypoints.min.js"></script>
-	<script type="text/javascript" src="js/modernizr.custom.js"></script>	
-	<script type="text/javascript" src="js/core.js"></script>
+	<script type="text/javascript" src="js/site.js"></script>
 </head>
 <body>
 	<!-- BEGIN menu -->
-	<div id="menu-btn" class="menu-btn open">
-		<span class="menu-ln"></span>
-		<span class="menu-ln"></span>
-		<span class="menu-ln"></span>
-	</div>		
-	<nav id="menu" class="out">
+	<button class="hamburger hamburger--collapse" type="button">
+		<span class="hamburger-box">
+			<span class="hamburger-inner"></span>
+		</span>
+	</button>
+	<nav id="navigation">
 		<ul>
-			<li id="menu-btn__home" class="menu"><span class="navlbl">HOME</span></li>
-			<li id="menu-btn__about" class="menu"><span class="navlbl">ABOUT</span></li>
-			<li id="menu-btn__work" class="menu"><span class="navlbl">WORK</span></li>
-			<li id="menu-btn__contacts" class="menu"><span class="navlbl">CONTACTS</span></li>
+			<li id="menu-btn__home" class="menu">HOME</li>
+			<li id="menu-btn__about" class="menu">ABOUT</li>
+			<li id="menu-btn__work" class="menu">WORK</li>
 		</ul>
-	</nav><!-- END menu -->
+	</nav>
+	<!-- END menu -->
 	<div class="clearfix" />
 
 	<!-- BEGIN sections -->	
@@ -31,16 +30,9 @@
 		<section id="section__home" class="ui master-head" role="article">
 			<div class="tag">
 				<div id="waypoint__home"></div>
-					<p>WELCOME, MY NAME IS <span>JASON.</span></p>
-					<div class="taganim">					
-						<p>I'M A</p>
-						<p>
-							<span class="word">SOFTWARE_DEVELOPER</span>
-							<span class="word">WEB_DEVELOPER</span>
-							<span class="word">INTERACTIVE_DEVELOPER</span>
-							<span class="word">WEB_DESIGNER</span>
-						</p>
-					</div>
+					<p>WELCOME, MY NAME IS <b>JASON.</b></p>
+					<p>I'M A <span class="tag-sweep-to-left"></span>						
+					</p>
 				</div>
 				<div id="waypoint__about"></div>
 			</div><!-- END tag1 -->
@@ -49,8 +41,9 @@
 		
 		<!-- BEGIN section about -->		
 		<section id="section__about" class="ui about">			
-			<h1><span>ABOUT</span></h1>
-			<p>My name is Jason Lam and I’m a <strong>software engineer/web developer &amp; interactive designer</strong> from <strong> Melbourne, Australia</strong>.</p>
+<!--
+			<h1>ABOUT</h1>
+			<p>My name is Jason Lam and I’m a <b>software engineer/web developer &amp; interactive designer</b> from <b> Melbourne, Australia</b>.</p>
 					<p>I'm an experienced software engineer/web developer and interactive designer and have worked with many types of clients on various types of projects. I am self motivated with a keen sense of design and thrive in a fast pace work environment. 
 			</p>	
 			<p>
@@ -102,88 +95,30 @@
 				<li>Google Analytics Google Tag</li>
 				<li>Adobe Omniture</li>
 			</ul>
-		</section><!-- END section__about -->
+		</section>
+--><!-- END section__about -->
 		<div class="clearfix" />
 		
 		<!-- BEGIN section work -->		
 		<section id="section__work" class="ui work">
 			<div id="waypoint"></div>
-			<h1><span>WORK</span></h1>
-			<div class="main">
-				<ul id="og-grid" class="og-grid">
-					<li>
-						<a href="#" data-title="Disney Junior" data-description="xyz">
-							<img src="images/work_logo-02.svg" />
-						</a>
-					</li>
-					<li>
-						<a href="#" data-title="Disney Playhouse" data-description="">
-							<img src="images/work_logo-03.svg" />
-						</a>
-					</li>
-					<li>
-						<a href="#" data-title="Disney Playhouse" data-description="">
-							<img src="images/work_logo-04.svg" />
-						</a>
-					</li>
-					<li>
-						<a href="#" data-title="Disney Playhouse" data-description="">
-							<img src="images/work_logo-05.svg" />
-						</a>
-					</li>
-					<li>
-						<a href="#" data-title="Disney Playhouse" data-description="">
-							<img src="images/work_logo-06.svg" />
-						</a>
-					</li>
-					<li>
-						<a href="#" data-title="Disney Playhouse" data-description="">
-							<img src="images/work_logo-07.svg" />
-						</a>
-					</li>
-					<li>
-						<a href="#" data-title="Disney Playhouse" data-description="">
-							<img src="images/work_logo-08.svg" />
-						</a>
-					</li>
-					<li>
-						<a href="#" data-title="Disney Playhouse" data-description="">
-							<img src="images/work_logo-09.svg" />
-						</a>
-					</li>
-					<li>
-						<a href="#" data-title="Disney Playhouse" data-description="">
-							<img src="images/work_logo-10.svg" />
-						</a>
-					</li>
-					<li>
-						<a href="#" data-title="Disney Playhouse" data-description="">
-							<img src="images/work_logo-11.svg" />
-						</a>
-					</li>
-				</ul>
-			</div>
+			<h1>WORK</h1>
 		<div id="waypoint__contacts"></div>	
 		</section><!-- END section__work -->
 		<div class="clearfix" />	
 		
 		<!-- BEGIN section contacts -->		
 		<section id="section__contacts" class="ui contacts">
-			<h1><span>CONTACTS</span></h1>		
+
+<!-- 			<h1>CONTACTS</h1>	 -->
+<!--				
 			<ul>
 				<li><a href="mailto:jason.lam@live.com">E : jason.lam@live.com</a></li>
 				<li>T : +61-422-759-905</li>
 			</ul>	
+-->
 		</section><!-- END section__contacts -->
 		<div class="clearfix" />
 	</div><!-- END sections -->
-
-	<!-- INFO: implemented to exec grid.js -->
-	<script src="js/custom-grid.js" ></script>
-	<script>
-		$(function() {
-			Grid.init();
-		});
-	</script>
 </body>
 </html>
