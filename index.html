@@ -2,7 +2,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Welcome + Portfolio | Jason Lam</title>
-	<link rel="stylesheet" href="sass/styles.css" type="text/css"  media="all">
+	
+	<link rel="stylesheet" href="sass/styles.css" type="text/css">
+<!-- 	<link rel="stylesheet" href="css/fonts.css" type="text/css"> -->
 	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 	<script type="text/javascript" src="js/noframework.waypoints.min.js"></script>
 	<script type="text/javascript" src="js/site.js"></script>
@@ -28,95 +30,170 @@
 	<div class="sections" role="main">		
 		<!-- BEGIN section home -->		
 		<section id="section__home" class="ui master-head" role="article">
-			<div class="tag">
-				<div id="waypoint__home"></div>
-					<p>WELCOME, MY NAME IS <b>JASON.</b></p>
-					<p>I'M A <span class="tag-sweep-to-left"></span>						
-					</p>
-				</div>
-				<div id="waypoint__about"></div>
-			</div><!-- END tag1 -->
+			<div class="section-wrapper">
+				<div class="tag">
+	<!-- 				<div id="waypoint__home"></div> -->
+						<p>WELCOME, MY NAME IS <b>JASON.</b></p>
+						<p>I'M A 
+							<span class="tag-sweep-to-left"></span>		
+						</p>
+					</div>
+	<!-- 				<div id="waypoint__about"></div> -->
+<!--
+					<div class="hi-icon-wrapper hi-icon-effect">
+						<a class="hi-icon"></a>
+						<a class="hi-icon"></a>
+						<a class="hi-icon"></a>
+					</div>
+-->
+				</div><!-- END tag -->
+			</div><!-- END section wrapper -->
 		</section><!-- END section__home -->
 		<div class="clearfix" />
 		
 		<!-- BEGIN section about -->		
 		<section id="section__about" class="ui about">			
+			<div class="section-wrapper">
+				<p><h1>ABOUT</h1></p>
 <!--
-			<h1>ABOUT</h1>
-			<p>My name is Jason Lam and I’m a <b>software engineer/web developer &amp; interactive designer</b> from <b> Melbourne, Australia</b>.</p>
-					<p>I'm an experienced software engineer/web developer and interactive designer and have worked with many types of clients on various types of projects. I am self motivated with a keen sense of design and thrive in a fast pace work environment. 
-			</p>	
-			<p>
-				Download CV
-				<a href="jason_lam_cv.pdf" target="_blank">PDF | </a><a href="jason_lam_cv.doc" target="_blank">WORD</a></a>
-			</p>
-			<div id="waypoint__work"></div>
-			<ul>
-				<li>SKILLS / EXPERTISE</li>
-				<li>Programming Languages || </li>
-				<li>JAVA</li>
-				<li>J2EE</li>
-				<li>JavaScript</li>
-				<li>Perl</li>
-				<li>PHP</li>
-				<li>ASP.NET</li>
-				<li>ActionScript3</li>
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>XML</li>
-				<li>Frameworks || </li>
-				<li>Spring MVC</li>
-				<li>Hibernate</li>
-				<li>Pure MVC</li>
-				<li>Apache Wicket</li>
-				<li>Management Applications || </li>
-				<li>JIRA</li>
-				<li>TRAC</li>
-				<li>Basecamp</li>
-				<li>TFS</li>
-				<li>Source Control ||</li>
-				<li>CVS</li>
-				<li>GIT</li>
-				<li>SVN</li>
-				<li>OS ||</li>
-				<li>MAC OSX</li>
-				<li>Windows</li>
-				<li>Linux</li>
-				<li>Applications ||</li>
-				<li>Adobe Suite</li>
-				<li>Office</li>
-				<li>IDE || </li>
-				<li>Netbeans</li>
-				<li>Jetbeans IDEA Ruby Mine PhpStorm</li>
-				<li>Coda</li>
-				<li>Vim</li>
-				<li>FDT</li>
-				<li>Web Analytics</li>
-				<li>Google Analytics Google Tag</li>
-				<li>Adobe Omniture</li>
-			</ul>
-		</section>
---><!-- END section__about -->
+				<p>My name is Jason Lam and I’m a <b>software/web developer &amp; interactive designer</b> from <b> Melbourne, Australia</b>.</p>
+						<p>I'm an experienced software engineer/web developer and interactive designer and have worked with many types of clients on various types of projects. I am self motivated with a keen sense of design and thrive in a fast pace work environment. 
+				</p>	
+				<p>
+					Download CV
+					<a href="jason_lam_cv.pdf" target="_blank">PDF | </a><a href="jason_lam_cv.doc" target="_blank">WORD</a></a>
+				</p>
+				<div id="waypoint__work"></div>
+				<ul>
+					<li>SKILLS / EXPERTISE</li>
+					<li>Programming Languages || </li>
+					<li>JAVA</li>
+					<li>J2EE</li>
+					<li>JavaScript</li>
+					<li>Perl</li>
+					<li>PHP</li>
+					<li>ASP.NET</li>
+					<li>ActionScript3</li>
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>XML</li>
+					<li>Frameworks || </li>
+					<li>Spring MVC</li>
+					<li>Hibernate</li>
+					<li>Pure MVC</li>
+					<li>Apache Wicket</li>
+					<li>Management Applications || </li>
+					<li>JIRA</li>
+					<li>TRAC</li>
+					<li>Basecamp</li>
+					<li>TFS</li>
+					<li>Source Control ||</li>
+					<li>CVS</li>
+					<li>GIT</li>
+					<li>SVN</li>
+					<li>OS ||</li>
+					<li>MAC OSX</li>
+					<li>Windows</li>
+					<li>Linux</li>
+					<li>Applications ||</li>
+					<li>Adobe Suite</li>
+					<li>Office</li>
+					<li>IDE || </li>
+					<li>Netbeans</li>
+					<li>Jetbeans IDEA Ruby Mine PhpStorm</li>
+					<li>Coda</li>
+					<li>Vim</li>
+					<li>FDT</li>
+					<li>Web Analytics</li>
+					<li>Google Analytics Google Tag</li>
+					<li>Adobe Omniture</li>
+				</ul>
+-->
+			</div><!-- END section wrapper -->
+		</section><!-- END section__about -->
 		<div class="clearfix" />
 		
 		<!-- BEGIN section work -->		
 		<section id="section__work" class="ui work">
-			<div id="waypoint"></div>
-			<h1>WORK</h1>
-		<div id="waypoint__contacts"></div>	
+			<div class="section-wrapper">
+<!-- 			<div id="waypoint"></div> -->
+				<p><h1>WORK</h1></p>
+				
+				<ul class="cbp-ig-grid">
+					<li>
+						<a>
+							<span class="cbp-ig-icon icon-logo-disney-junior"></span>
+							<h3 class="cbp-ig-title">Disney Junior UK & Europe</h3>
+							<span class="cbp-ig-category">HTML, CSS, JSP, ActionScript3 , JS, Omniture, CMS Integration, Project Management, Design, Rebrand</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span class="cbp-ig-icon icon-logo-disney"></span>
+							<h3 class="cbp-ig-title">Disney Playhouse UK</h3>
+							<span class="cbp-ig-category">HTML, CSS, JSP, ActionScript3, JS, Omniture, Design, CMS Integration, Project Management</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span class="cbp-ig-icon icon-logo-anz"></span>
+							<h3 class="cbp-ig-title">ANZ</h3>
+							<span class="cbp-ig-category">ActionScript3, Illustrator, Design</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span class="cbp-ig-icon icon-logo-lego"></span>
+							<h3 class="cbp-ig-title">Lego</h3>
+							<span class="cbp-ig-category">ActionScript3, Animations, PHP, Design, CMS</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span class="cbp-ig-icon icon-logo-chuggington"></span>
+							<h3 class="cbp-ig-title">Chuggington UK</h3>
+							<span class="cbp-ig-category">ActionScript3, Animations, PHP, Design, CMS</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span class="cbp-ig-icon icon-logo-everlast"></span>
+							<h3 class="cbp-ig-title">Everlast</h3>
+							<span class="cbp-ig-category">HTML, PHP, Email Subscription</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span class="cbp-ig-icon icon-logo-isuzu"></span>
+							<h3 class="cbp-ig-title">ISUZU</h3>
+							<span class="cbp-ig-category">HTML, CSS, XML</span>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span class="cbp-ig-icon icon-logo-malvernstar"></span>
+							<h3 class="cbp-ig-title">Malvern Star</h3>
+							<span class="cbp-ig-category">ActionScript3, HTML, CSS</span>
+						</a>
+					</li>
+				</ul>
+<!-- 			<img src="images/work_logo-02.svg" class="svg" /> -->
+<!-- 		<div id="waypoint__contacts"></div>	 -->
+			</div><!-- END section wrapper -->
 		</section><!-- END section__work -->
 		<div class="clearfix" />	
 		
 		<!-- BEGIN section contacts -->		
 		<section id="section__contacts" class="ui contacts">
-
-<!-- 			<h1>CONTACTS</h1>	 -->
+			<div class="section-wrapper">
+				<p><h1>CONTACTS</h1></p>	
 <!--				
 			<ul>
 				<li><a href="mailto:jason.lam@live.com">E : jason.lam@live.com</a></li>
 				<li>T : +61-422-759-905</li>
 			</ul>	
 -->
+			</div><!-- END section wrapper -->
 		</section><!-- END section__contacts -->
 		<div class="clearfix" />
 	</div><!-- END sections -->
