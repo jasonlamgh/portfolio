@@ -3,15 +3,18 @@ $(document).ready(function(){
 	
 	$('nav').find('li').each(function(){
 		var id = $(this).attr('value');
+		
+		var _offset = id === 'home' ? '-20px' : '20px';
 		var waypoint = new Waypoint({
 				element: document.getElementById('section-' + id),
 				handler: function() {
 // 					var id = this.element.id.replace('waypoint', '');
 					updateMenuState(id);
 		  			},
-		  		offset: '-10px'
+		  		offset: _offset
 		  		});
-	});	
+		});	
+		
 });
 
 function init() { 
@@ -33,7 +36,9 @@ function init() {
 		var id = $(this).attr('value');
 		updateMenuState(id);
 		$('html, body').animate({scrollTop:$('section#section-'+id).offset().top}, 600);
-		$('#navigation').toggleClass('nav-is-active');		
+		$('#navigation').toggleClass('nav-is-active');	
+		$('.hamburger').toggleClass('is-active');
+		$('.hamburger').toggleClass('hamburger-close');	
 	});
 
 }
