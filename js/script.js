@@ -1,29 +1,17 @@
 $(document).ready(function(){
-	init();	
+	init();		
 	
-	
-	 $('img[src$=".svg"]').each(function() {
-        var $img = jQuery(this);
-        var imgURL = $img.attr('src');
-        var attributes = $img.prop("attributes");
-
-        $.get(imgURL, function(data) {
-            // Get the SVG tag, ignore the rest
-            var $svg = jQuery(data).find('svg');
-
-            // Remove any invalid XML tags
-            $svg = $svg.removeAttr('xmlns:a');
-
-            // Loop through IMG attributes and apply on SVG
-            $.each(attributes, function() {
-                $svg.attr(this.name, this.value);
-            });
-
-            // Replace IMG with SVG
-            $img.replaceWith($svg);
-        }, 'xml');
-    });
-	
+	$('nav').find('li').each(function(){
+		var id = $(this).attr('value');
+		var waypoint = new Waypoint({
+				element: document.getElementById('section-' + id),
+				handler: function() {
+// 					var id = this.element.id.replace('waypoint', '');
+					updateMenuState(id);
+		  			},
+		  		offset: '-10px'
+		  		});
+	});	
 });
 
 function init() { 
@@ -38,8 +26,29 @@ function init() {
 		$(this).toggleClass('is-active');
 		$(this).toggleClass('hamburger-close');
 		$('#navigation').toggleClass('nav-is-active');
-	});		
+	});
+	
+	// : INFO : init menu button listeners	
+	$('nav').find('li').click(function(){
+		var id = $(this).attr('value');
+		updateMenuState(id);
+		$('html, body').animate({scrollTop:$('section#section-'+id).offset().top}, 600);
+		$('#navigation').toggleClass('nav-is-active');		
+	});
+
 }
+
+function updateMenuState(id) {
+	$('nav').find('li').each(function(){
+		if(id === $(this).attr('value')) {
+			$(this).addClass('active');
+		}
+		else {
+			$(this).removeClass('active');
+		}
+	});
+}
+
 
 (function($){
     $.fn.typer = function(text, options){

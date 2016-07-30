@@ -1,13 +1,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome + Portfolio | Jason Lam</title>
-	
+	<title>Welcome + Portfolio | Jason Lam</title>	
 	<link rel="stylesheet" href="sass/styles.css" type="text/css">
-<!-- 	<link rel="stylesheet" href="css/fonts.css" type="text/css"> -->
 	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 	<script type="text/javascript" src="js/noframework.waypoints.min.js"></script>
-	<script type="text/javascript" src="js/site.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 	<!-- BEGIN menu -->
@@ -18,9 +16,9 @@
 	</button>
 	<nav id="navigation">
 		<ul>
-			<li id="menu-btn__home" class="menu">HOME</li>
-			<li id="menu-btn__about" class="menu">ABOUT</li>
-			<li id="menu-btn__work" class="menu">WORK</li>
+			<li value="home" class="init">HOME</li>
+			<li value="about" class="init">ABOUT</li>
+			<li value="work" class="init">WORK</li>
 		</ul>
 	</nav>
 	<!-- END menu -->
@@ -29,7 +27,7 @@
 	<!-- BEGIN sections -->	
 	<div class="sections" role="main">		
 		<!-- BEGIN section home -->		
-		<section id="section__home" class="ui master-head" role="article">
+		<section id="section-home" class="ui master-head" role="article">
 			<div class="section-wrapper">
 				<div class="tag">
 	<!-- 				<div id="waypoint__home"></div> -->
@@ -52,7 +50,7 @@
 		<div class="clearfix" />
 		
 		<!-- BEGIN section about -->		
-		<section id="section__about" class="ui about">			
+		<section id="section-about" class="ui about">			
 			<div class="section-wrapper">
 				<p><h1>ABOUT</h1></p>
 <!--
@@ -114,7 +112,7 @@
 		<div class="clearfix" />
 		
 		<!-- BEGIN section work -->		
-		<section id="section__work" class="ui work">
+		<section id="section-work" class="ui work">
 			<div class="section-wrapper">
 <!-- 			<div id="waypoint"></div> -->
 				<p><h1>WORK</h1></p>
@@ -184,18 +182,18 @@
 		<div class="clearfix" />	
 		
 		<!-- BEGIN section contacts -->		
+<!--
 		<section id="section__contacts" class="ui contacts">
 			<div class="section-wrapper">
-				<p><h1>CONTACTS</h1></p>	
-<!--				
+				<p><h1>CONTACTS</h1></p>					
 			<ul>
 				<li><a href="mailto:jason.lam@live.com">E : jason.lam@live.com</a></li>
 				<li>T : +61-422-759-905</li>
 			</ul>	
--->
 			</div><!-- END section wrapper -->
 		</section><!-- END section__contacts -->
 		<div class="clearfix" />
+-->
 	</div><!-- END sections -->
 </body>
 </html>
