@@ -4,12 +4,12 @@ $(document).ready(function(){
 	$('nav').find('li').each(function(){
 		var id = $(this).attr('value');
 		
+		// : INFO : init way point to update menu state
 		var _offset = id === 'home' ? '-20px' : '20px';
 		var waypoint = new Waypoint({
 				element: document.getElementById('section-' + id),
 				handler: function() {
-// 					var id = this.element.id.replace('waypoint', '');
-					updateMenuState(id);
+						updateMenuState(id);
 		  			},
 		  		offset: _offset
 		  		});

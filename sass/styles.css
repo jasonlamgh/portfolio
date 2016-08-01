@@ -108,12 +108,8 @@
 	Theme Colors
 ***********************************************************/
 /*
-$theme-color: #47a3da;
-$theme-fnt-color: #fff;
-$theme-fnt-color-alt: #47a3da;
-$theme-bg-color: #222;
-$theme-bg-color-1: #fff;
-$theme-icon-bg-color: #fff;
+$theme-fnt-color-2: #fff;
+$theme-bg-color-1: rgba(54,55,62,0.7);
 */
 /**********************************************************
 	Global SASS CSS
@@ -153,7 +149,7 @@ section h1 {
   text-align: center; }
 
 section h1:after {
-  content: "";
+  content: ' ';
   display: block;
   margin: 20px auto 30px;
   width: 30px;
@@ -168,19 +164,61 @@ ul, li {
 /**********************************************************
 	Class SASS CSS
 ***********************************************************/
+.about li {
+  display: inline-block; }
+
+.about p {
+  padding: 10px;
+  /* relative to box-shadow */
+  margin: 0; }
+
+.about p > span {
+  padding: 10px 0 10px 0;
+  font-size: 20px;
+  line-height: 2.1em;
+  color: #fff;
+  background: #47a3da;
+  box-shadow: 10px 0 0 #47a3da, -10px 0 0 #47a3da;
+  display: inline; }
+
+.about-td.skill p > span {
+  background: rgba(54, 55, 62, 0.7);
+  box-shadow: 10px 0 0 rgba(54, 55, 62, 0.7), -10px 0 0 rgba(54, 55, 62, 0.7); }
+
+.about-table {
+  display: table; }
+
+.about-tr {
+  display: table-row; }
+
+.about-td {
+  display: table-cell;
+  padding: 20px;
+  width: 100%;
+  width: 50%; }
+
+.about-td.info {
+  border-right: #47a3da dotted 1px;
+  text-align: right; }
+
+@media screen and (max-width: 30em) {
+  .about-td.info {
+    border-right: none; } }
 /*
-.about li.about {
-    display: inline-block;
-    font-size: 14px;
-    color: #fff;
-    background-color: $theme-bg-color-1;
-    padding: 8px;
-    margin-top: 3px;
-    opacity: 0.6;
+@media screen and (max-width: 62.75em) {
+	.about-td.info {
+		border-right: $theme-bg-color-2 solid 1px;
+background: orange;
+	}
 }
 */
-.about b, .about a {
-  font-weight: 400; }
+.about-td.skill li {
+  font-size: 14px;
+  color: #fff;
+  background: #47a3da;
+  background: rgba(54, 55, 62, 0.7);
+  padding: 10px;
+  margin: 2px; }
 
 /**********************************************************
 	Custom BoxGride
@@ -200,7 +238,7 @@ ul, li {
 .cbp-ig-grid li {
   cursor: pointer;
   padding: 5px;
-  width: 33%;
+  width: 25%;
   float: left;
   height: 420px;
   text-align: center;
@@ -215,7 +253,8 @@ ul, li {
   transition: background 0.2s; }
 
 .cbp-ig-icon {
-  padding: 30px 0 0 0;
+  padding: 0;
+  margin: 0;
   display: block;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -moz-transform 0.2s;
@@ -251,7 +290,6 @@ ul, li {
   left: 50%;
   margin: -10px 0 0 -80px;
   -webkit-transition: margin-top 0.2s;
-  /* top or translate does not seem to work in Firefox */
   -moz-transition: margin-top 0.2s;
   transition: margin-top 0.2s; }
 
@@ -344,6 +382,22 @@ ul, li {
   content: ' ';
   display: table; }
 
+.footer {
+  font-size: 14px;
+  color: #fff;
+  background: #47a3da;
+  position: relative;
+  display: inline-block;
+  bottom: 0px;
+  padding: 10px;
+  width: 100%; }
+
+.footer a {
+  color: #fff; }
+
+.footer .copyright {
+  text-align: right; }
+
 .hamburger {
   position: fixed;
   height: 68px;
@@ -400,6 +454,7 @@ nav {
 nav li {
   font-size: 28px;
   font-weight: 300;
+  text-align: right;
   background-color: #47a3da;
   color: #fff;
   padding: 12px;

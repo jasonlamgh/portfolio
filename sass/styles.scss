@@ -45,14 +45,11 @@ $theme-fnt-color-1: #fff;
 $theme-fnt-color-2: #47a3da;
 $theme-bg-color-1: #fff;
 $theme-bg-color-2: #47a3da;
+$theme-bg-color-3: rgba(54,55,62,0.7);
 
 /*
-$theme-color: #47a3da;
-$theme-fnt-color: #fff;
-$theme-fnt-color-alt: #47a3da;
-$theme-bg-color: #222;
-$theme-bg-color-1: #fff;
-$theme-icon-bg-color: #fff;
+$theme-fnt-color-2: #fff;
+$theme-bg-color-1: rgba(54,55,62,0.7);
 */
 
 /**********************************************************
@@ -82,7 +79,7 @@ body {
     overflow: scroll;
     overflow-x: hidden;
     
-    background-color: $theme-color-1;
+    background-color: $theme-bg-color-1;
 }
 
 h1 {
@@ -100,7 +97,7 @@ section h1 {
 }
 
 section h1:after {
-    content: "";
+	content: ' ';
     display: block;
     margin: 20px auto 30px;
     width: 30px;
@@ -118,20 +115,75 @@ ul, li {
 /**********************************************************
 	Class SASS CSS
 ***********************************************************/
+
+.about li {
+	display: inline-block;
+}
+
+$multiline-padding: 10px;
+
+.about p {
+	padding: $multiline-padding; /* relative to box-shadow */
+	margin: 0;
+}
+
+.about p > span {
+	padding: $multiline-padding 0 $multiline-padding 0;
+	font-size: 20px;
+	line-height: 2.1em;
+	color: $theme-color-1;
+	background: $theme-bg-color-2;	
+	box-shadow: $multiline-padding 0 0 $theme-bg-color-2, -$multiline-padding 0 0 $theme-bg-color-2;
+	display: inline;
+}
+.about-td.skill p > span {
+	background: $theme-bg-color-3;
+	box-shadow: $multiline-padding 0 0 $theme-bg-color-3, -$multiline-padding 0 0 $theme-bg-color-3;
+}
+
+.about-table {
+	display: table;
+}
+
+.about-tr {
+	display: table-row;
+}
+
+.about-td {
+	display: table-cell;
+	padding: 20px;
+	width: 100%;
+	width: 50%;	
+}
+
+.about-td.info {
+ 	border-right: $theme-bg-color-2 dotted 1px;	
+	text-align: right;
+}
+
+@media screen and (max-width: 30em) { 
+	.about-td.info {
+		border-right: none;
+
+	}
+}
+
 /*
-.about li.about {
-    display: inline-block;
-    font-size: 14px;
-    color: #fff;
-    background-color: $theme-bg-color-1;
-    padding: 8px;
-    margin-top: 3px;
-    opacity: 0.6;
+@media screen and (max-width: 62.75em) {
+	.about-td.info {
+		border-right: $theme-bg-color-2 solid 1px;
+background: orange;
+	}
 }
 */
 
-.about b, .about a {
-    font-weight: 400;
+.about-td.skill li {
+	font-size: 14px;
+	color: $theme-color-1;
+	background: $theme-bg-color-2;
+	background: $theme-bg-color-3;
+	padding: 10px;
+	margin: 2px;
 }
 
 /**********************************************************
@@ -156,7 +208,8 @@ ul, li {
 .cbp-ig-grid li {
 	cursor: pointer;
     padding: 5px;
-	width: 33%;
+// 	width: 33%;
+	width: 25%;
 	float: left;
 	height: 420px;
 	text-align: center;
@@ -173,7 +226,9 @@ ul, li {
 }
 
 .cbp-ig-icon {
-	padding: 30px 0 0 0;
+// 	padding: 30px 0 0 0;
+	padding: 0;
+	margin: 0;
 	display: block;
 	-webkit-transition: -webkit-transform 0.2s;
 	transition: -moz-transform 0.2s;
@@ -211,7 +266,7 @@ ul, li {
 	top: 0px;
 	left: 50%;
 	margin: -10px 0 0 -80px;
-	-webkit-transition: margin-top 0.2s; /* top or translate does not seem to work in Firefox */
+	-webkit-transition: margin-top 0.2s;
 	-moz-transition: margin-top 0.2s;
 	transition: margin-top 0.2s;
 }
@@ -343,6 +398,25 @@ ul, li {
 
 }
 
+.footer {
+    font-size: 14px;
+	color: $theme-fnt-color-1;
+	background: $theme-bg-color-2;
+	position: relative;
+	display: inline-block;
+    bottom: 0px;
+    padding: 10px;
+    width: 100%;
+}
+
+.footer a {
+	color: $theme-fnt-color-1;
+}
+
+.footer .copyright {
+text-align: right;
+}
+
 .hamburger {
 	position: fixed;
 	height: 68px;
@@ -422,6 +496,7 @@ nav {
 nav li {	
 	font-size: 28px;
 	font-weight: 300;	
+	text-align: right;
 	background-color: $theme-bg-color-2;
 	color: $theme-fnt-color-1;
  	padding: 12px;
